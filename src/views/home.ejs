@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <title><%= title %> </title>
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        </head>
+
+        <nav>
+            <div class="nav-wrapper grey">
+                <a href="#" class="brand-logo">EasySoft</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/">Home</a></li>
+                <li><a href="/todoList">Todo List</a></li>
+            </ul>
+            </div>
+        </nav>
+
+        <header>
+            <div class="container">
+                <h3>Employee List</h3>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="row">
+                <% employeeList.forEach((employee)=>{ %> 
+                <div class="col s6 ">
+                    <div class="card ">
+                        <div class="card-image">
+                        <img src="<%= employee.image %> ">
+                        </div>
+                        <div class="card-content">
+                        <p><strong>Employee ID:</strong> <%= employee.employeeID %> </p>
+                        <p><strong>Employee Name:</strong> <%= employee.name %></p>
+                        <p><strong>Job Description:</strong> <%= employee.jobDescription %></p>
+                        <div class="input-field ">
+                            <label for="employeeID">Employee ID</label>
+                            <input type="text"  id="employeeID" name="employeeID">
+                        </div>
+                        </div>
+                        <div class="card-action">
+                        <a href="/findTodo" class="btn blue">Request Todo</a>
+                        </div>
+                    </div>
+                    </div>
+                    <% }) %> 
+                </div>
+        </div>
+        <body>
+
+        <!--JavaScript at end of body for optimized loading-->
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script src="/js/jquery.min.js"></script>
+    </body>
+</html>

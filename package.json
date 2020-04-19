@@ -1,0 +1,22 @@
+{
+  "name": "easysoft",
+  "version": "1.0.0",
+  "description": "A web app for displaying a list of employees and their todo ",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "employeelist",
+    "todos"
+  ],
+  "author": "Bluawofogbe Dominic",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "jquery": "^3.5.0",
+    "materialize-css": "^1.0.0",
+    "mongodb": "^2.2.33"
+  }
+}

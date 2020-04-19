@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <title>New Todo </title>
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        </head>
+
+        <nav>
+            <div class="nav-wrapper grey">
+                <a href="#" class="brand-logo">EasySoft</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/">Home</a></li>
+                <li><a href="">Todo List</a></li>
+            </ul>
+            </div>
+        </nav>
+
+        
+        <div class="container">
+            <h1>New Todo</h1>
+            <div class="row">
+                <form class="col s12" action="/upload" method="POST">
+                    <div class="row">
+                        
+                        <div class="input-field col s8">
+                            <label for="employeeID">Employee ID</label>
+                            <input  required value=""  type="text"  id="employeeID" name="employeeID">
+                        </div>
+                        <div class="input-field col s8">
+                            <label for="name">Name</label>
+                            <input type="text"  id="name" name="name">
+                        </div>
+                        
+                        <div class="input-field col s8">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea id="todos"  class="materialize-textarea" name="todos"></textarea>
+                            <label for="todos">Todos</label>
+                        </div>
+                    </div>
+                    <a href="/todoList" class="btn red">Cancel</a>
+                    <button type="submit" class="btn blue">Save</button>
+                </form>
+            </div>
+        </div>
+        <body>
+
+        <!--JavaScript at end of body for optimized loading-->
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script src="/js/jquery.min.js"></script>
+    </body>
+</html>
