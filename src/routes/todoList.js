@@ -20,7 +20,7 @@ router.post('/upload',function(req, res) {
         todos: req.body.todos
     };
 
-    mongo.connect(url,{ useUnifiedTopology: true },function(err, db) {
+    mongo.connect(url,function(err, db) {
         assert.equal(null, err);
         db.collection('todos').insertOne(item, function(err, result) {
         assert.equal(null, err);
@@ -66,6 +66,36 @@ router.get('/findTodo', function(req, res, next) {
             });
     });
 });
+
+// var findDocuments = function(db, callback) {
+//     // Get the documents collection
+//     var collection = db.collection('documents');
+//     // Find some documents
+//     collection.find({}).toArray(function(err, docs) {
+//         assert.equal(err, null);
+        
+//         console.log("Found the following records");
+//         console.dir(docs);
+//         callback(docs);
+//     });
+// }
+
+// var MongoClient = require('mongodb').MongoClient
+// var assert = require('assert');
+
+// // Connection URL
+// var url = 'mongodb://localhost:27017/myproject';
+// // Use connect method to connect to the Server
+// MongoClient.connect(url, function(err, db) {
+//     assert.equal(null, err);
+//     console.log("Connected correctly to server");
+
+
+//     findDocuments(db, function() {
+//         db.close();
+//     });
+
+// });
 
 
 module.exports = router;
