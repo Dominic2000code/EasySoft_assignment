@@ -7,3 +7,6 @@
 Note: the employee ID must match.😊😊😊😊
 ```
 3. The employee can now request his or her todo by providing an employee ID and click on request todo
+```txt
+Note: all data must be inputted from the todoList route by clicking the button NEW TODO.
+```
